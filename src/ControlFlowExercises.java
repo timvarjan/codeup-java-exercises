@@ -2,6 +2,7 @@
 
 package src;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.Formatter;
 
@@ -116,33 +117,51 @@ public class ControlFlowExercises {
 //
 
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("What number would you like to go up to? ");
-        int userInput = scanner.nextInt();
-        System.out.println("Here is your table!");
-
-        System.out.println("The highest we will go is: --> \"" + userInput + "\" <--");
-        System.out.println("Number Squared Cubed");
-
-
-        Formatter fmt;
-
-        for (int i = 1; i <= userInput; i++) {
-            fmt = new Formatter();
-
-            fmt.format("%4d   %4d   %4d", i, i * i, i * i * i);
-
-            System.out.println(fmt);
-
-
-    }
+//        System.out.print("What number would you like to go up to? ");
+//        int userInput = scanner.nextInt();
+//        System.out.println("Here is your table!");
+//
+//        System.out.println("The highest we will go is: --> \"" + userInput + "\" <--");
+//        System.out.println("Number Squared Cubed");
+//
+//
+//        Formatter fmt;
+//
+//        for (int i = 1; i <= userInput; i++) {
+//            fmt = new Formatter();
+//
+//            fmt.format("%4d   %4d   %4d", i, i * i, i * i * i);
+//
+//            System.out.println(fmt);
+//    }
+        //OR====================
+//        boolean confirm = true;
+//
+//        do {
+//            System.out.println("What number would you like to go up to? ");
+//
+//            int userInt = scanner.nextInt();
+//            System.out.println("Here is your table:");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("----- | ------- | ------");
+//
+//            for (int i = 1; i <= userInt; i++) {
+//                int square = i * i;
+//                int cubed = i * i * i;
+//                System.out.printf("%-7s|%-7s|%-7s\n", i, square, cubed);
+//            }
+//            System.out.println("Continue? [y/n]");
+//            confirm = scanner.next().equalsIgnoreCase("y");
+//        } while(confirm);
+//        System.out.println("Okie dokie, adios!");
 
 
 
 //  ==========================================================
 
-//        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 //        String userAnswer;
 //
 //        do {
@@ -169,5 +188,11 @@ public class ControlFlowExercises {
 //            userAnswer = scanner.next();
 //
 //        } while (userAnswer.equals("yes"));
+
+        //OR====================Review Answer
+
+//see video
+
+
     }
 }
