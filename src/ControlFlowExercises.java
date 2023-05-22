@@ -152,10 +152,7 @@ public class ControlFlowExercises {
 //                int cubed = i * i * i;
 //                System.out.printf("%-7s|%-7s|%-7s\n", i, square, cubed);
 //            }
-//            System.out.println("Continue? [y/n]");
-//            confirm = scanner.next().equalsIgnoreCase("y");
-//        } while(confirm);
-//        System.out.println("Okie dokie, adios!");
+//
 
 
 
