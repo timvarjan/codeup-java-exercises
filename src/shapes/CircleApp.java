@@ -1,19 +1,27 @@
-//package src.shapes;
-//
-//import util.Input;
-//public class CircleApp {
-//    public static void main(String[] args) {
-//        Input in = new Input();
-//
-//
-//        System.out.println("Enter a radius");
-//        double radius = in.getDouble();
-//        Circle cir = new Circle(radius);
-//
-//        System.out.println("This is the area: " + cir.getArea());
-//        System.out.println("This is the circumference: " + cir.getCircumference());
-//        System.out.println("Would you like to continue our circle app: ");
-//        in.getString();
-//    } while(in.yesNo());
-//
-//}
+package src.shapes;
+
+
+import src.util.Input;
+
+public class CircleApp {
+
+    public static void main(String[] args) {
+        Input input = new Input();
+
+        do {
+            System.out.print("Enter the radius of the circle: ");
+            double radius = input.getDouble();
+
+            Circle circle = new Circle(radius);
+
+
+            System.out.printf("The circumference of the circle is: %.2f%n", circle.getCircumference());
+            System.out.printf("The area of the circle is: %.2f%n", circle.getArea());
+
+            System.out.println("Would you like to create another circle");
+            input.getString();
+        } while (input.yesNo());
+
+
+    }
+}

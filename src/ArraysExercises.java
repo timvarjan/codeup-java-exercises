@@ -28,14 +28,24 @@ public class ArraysExercises {
             }
 
             // Add a new person to the array
+            System.out.println("---------");
             Person newPerson = new Person("Summer");
             people = addPerson(people, newPerson);
 
             Person newPerson2 = new Person("Beth");
             people = addPerson(people, newPerson2);
 
+            Person newPerson3 = new Person("Jerry");
+            people = addPerson(people, newPerson3);
+
+            Person newPerson4 = new Person("Rick Prime");
+            people = addPerson(people, newPerson4);
+
+
+
             // Print the updated array
             for (Person person : people) {
+
                 System.out.println(person.getName());
             }
         }
