@@ -1,6 +1,5 @@
 package src.util;
 
-
 import java.util.Scanner;
 
 public class Input {
@@ -25,43 +24,60 @@ public class Input {
     }
 
     public int getInt(){
-        return this.scanner.nextInt();
+//        return this.scanner.nextInt();
+        System.out.println("Enter an Integer value: ");
+        String stringVal = getString();
+        try {
+            return Integer.valueOf(stringVal);
+        } catch (NumberFormatException e){
+            System.out.println("Not an integer");
+            return getInt();
+        }
     }
 
     public double getDouble(){
-        return this.scanner.nextDouble();
-    };
-
-
-    public int getInt(int min, int max, String prompt){
-        System.out.println(prompt);
-        int userNum = Integer.valueOf(this.getString());
-        if(userNum >= min && userNum <= max){
-            return userNum;
+//        return this.scanner.nextDouble();
+        System.out.println("Enter an double: ");
+        String stringVal = getString();
+        try {
+            return Double.valueOf(stringVal);
+        } catch (NumberFormatException e){
+            System.out.println("Not a double");
+            return getDouble();
         }
-        System.out.println("Integer not between bounds. Enter integer: ");
-        return getInt(min, max,prompt);
     }
 
-    public int getInt(int min, int max){
-        int userNum = Integer.valueOf(this.getString());
-        if(userNum >= min && userNum <= max){
-            return userNum;
-        }
-        System.out.println("Integer not between bounds. Enter integer: ");
-        return getInt(min, max);
-    }
 
-    public double getDouble(double min, double max, String prompt){
-        System.out.println(prompt);
 
-        double userNum = Double.valueOf(this.getString());
-        if(userNum >= min && userNum <= max){
-            return userNum;
-        }
-        System.out.println("Double not between bounds. Enter a double: ");
-        return getDouble(min, max,prompt);
-    }
+//    public int getInt(int min, int max, String prompt){
+//        System.out.println(prompt);
+//        int userNum = Integer.valueOf(this.getString());
+//        if(userNum >= min && userNum <= max){
+//            return userNum;
+//        }
+//        System.out.println("Integer not between bounds. Enter integer: ");
+//        return getInt(min, max,prompt);
+//    }
+//
+//    public int getInt(int min, int max){
+//        int userNum = Integer.valueOf(this.getString());
+//        if(userNum >= min && userNum <= max){
+//            return userNum;
+//        }
+//        System.out.println("Integer not between bounds. Enter integer: ");
+//        return getInt(min, max);
+//    }
+//
+//    public double getDouble(double min, double max, String prompt){
+//        System.out.println(prompt);
+//
+//        double userNum = Double.valueOf(this.getString());
+//        if(userNum >= min && userNum <= max){
+//            return userNum;
+//        }
+//        System.out.println("Double not between bounds. Enter a double: ");
+//        return getDouble(min, max,prompt);
+//    }
 
     public static void main(String[] args) {
         Input inputOne = new Input();
@@ -69,6 +85,14 @@ public class Input {
 //        System.out.println(inputOne.getString());
 //        System.out.println("yesNo: ");
 //        System.out.println(inputOne.yesNo());
-        System.out.println(inputOne.getInt(1, 10,"give me an integer between 1-10"));
+//        System.out.println(inputOne.getInt(1, 10,"give me an integer between 1-10"));
+        System.out.println(inputOne.getInt());
+        System.out.println(inputOne.getDouble());
     }
 }
+
+
+
+
+
+

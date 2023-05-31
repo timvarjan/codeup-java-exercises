@@ -18,7 +18,8 @@ public class MoviesApplication {
         while(choice != EXIT_APP) {
             printMenu();
 
-            choice = in.getInt(0, 6);
+//            choice = in.getInt();
+            //removed 0, 6 from parenthesis above during the input update exercise
 
             doChoice(choice);
 
